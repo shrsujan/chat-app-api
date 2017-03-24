@@ -1,0 +1,38 @@
+html(lang='en')
+    head
+        title=header.title
+        meta(charset='utf-8')
+        style(rel='stylesheet', type='text/css').
+            body {
+                background-color: #bbb;
+                color: #ddd;
+            }
+            .container {
+                margin: auto;
+                position: absolute;
+                top: 0; left: 0; bottom: 0; right: 0;
+            }
+            p.main {
+                text-align: center;
+                font-family: "Microsoft Sans Serif", sans-serif;
+                font-size: 150px;
+                margin-bottom: auto;
+                text-shadow: #222 1px 1px 15px;
+            }
+            .color {
+                color: #212334;
+            }
+            p.sub {
+                text-align: center;
+                font-family: "Comic Sans MS", serif;
+                font-size: 20px;
+                font-style: italic;
+                text-shadow: #222 1px 1px 5px;
+            }
+    body
+        .container
+            p.main
+                span.color 4
+                span 0
+                span.color 4
+            p.sub Sorry, the page you are looking for does not exist.
