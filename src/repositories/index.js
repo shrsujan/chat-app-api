@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import model from '../models'
 const basename = path.basename(module.filename)
 
 let repository = {}
@@ -12,7 +11,7 @@ fs
     })
     .forEach((file) => {
       let repoName = file.split('.')[0]
-      let repo = require('./' + repoName)(model)
+      let repo = require('./' + repoName)
       repository[repoName] = repo
     })
 

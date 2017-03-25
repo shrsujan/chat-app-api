@@ -2,6 +2,7 @@ import fs from 'fs'
 import Sequelize from 'sequelize'
 import path from 'path'
 import config from '../config/config.js'
+import log from 'winston-logger-setup'
 const basename = path.basename(module.filename)
 let db = {}
 let sequelize = {}
@@ -9,7 +10,10 @@ let sequelize = {}
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable])
 } else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config)
+  sequelize = new Sequelize(config[process.env.NODE_ENV].database, config[process.env.NODE_ENV].username, config[process.env.NODE_ENV].password, {
+    logging: (process.env.NODE_ENV === 'development') ? log.cnslLog.debug : false,
+    host: config[process.env.NODE_ENV].host
+  })
 }
 
 fs

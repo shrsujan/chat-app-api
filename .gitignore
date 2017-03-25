@@ -4,3 +4,4 @@
 /node_modules
 .env
 /src/config/config.example.js
+npm-debug.log.*
