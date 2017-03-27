@@ -11,18 +11,22 @@ export default function socketService (client, io) {
     username = username.toLowerCase()
     let success = (user) => {
       if (user) {
-        client.userInfo = user
-        members.push(username)
-        members.sort()
-        memberSocketObjects.push(client)
-        log.cnslLog.info(username + ' is online')
-        client.emit('userInfo', user)
-        io.emit('members', members)
-        Repository.MessageRepository.retrieve({}, (data) => {
-          client.emit('allMessages', data)
-        }, (err) => {
-          log.error(err)
-        })
+        if (members.indexOf(username) > -1) {
+          client.emit('userInfo', false)
+        } else {
+          client.userInfo = user
+          members.push(username)
+          members.sort()
+          memberSocketObjects.push(client)
+          log.cnslLog.info(username + ' is online')
+          client.emit('userInfo', user)
+          io.emit('members', members)
+          Repository.MessageRepository.retrieve({}, (data) => {
+            client.emit('allMessages', data)
+          }, (err) => {
+            log.error(err)
+          })
+        }
       } else {
         let createSuccess = (user) => {
           if (user) {
