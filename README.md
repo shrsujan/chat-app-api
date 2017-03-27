@@ -1,2 +1,2 @@
-# chat-app-with-ember
-Simple Chat Application using ExpressJs and EmberJs
+# chat-app-api
+Simple Chat Application API
