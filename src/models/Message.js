@@ -8,6 +8,7 @@ let Message = (sequelize, DataTypes) => {
       associate: (models) => {
         Message.belongsTo(models.User, {
           foreignKey: {
+            key: 'userId',
             allowNull: false
           }
         })

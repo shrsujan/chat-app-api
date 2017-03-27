@@ -5,6 +5,8 @@ import log from 'winston-logger-setup'
 import routes from './routes'
 import http from 'http'
 import path from 'path'
+import socketIO from 'socket.io'
+import socketService from '../services/socketService'
 
 let app = express()
 
@@ -50,5 +52,9 @@ server.on('listening', () => {
     : 'port ' + addr.port
   log.cnslLog.debug('Listening on ' + bind, {})
 })
+
+let io = socketIO(server)
+
+io.on('connection', (client) => socketService(client, io))
 
 export default app

@@ -27,7 +27,7 @@ exports.getUserByUsername = (req, res, next) => {
     if (data) {
       req.cdata = {
         success: 1,
-        message: 'User retrieved successful',
+        message: 'User retrieved successfully',
         data
       }
       next()

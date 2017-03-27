@@ -66,7 +66,7 @@ describe('UserController', () => {
       }
       let expectedResult = {
         success: 1,
-        message: 'User retrieved successful',
+        message: 'User retrieved successfully',
         data: {
           username: 'test',
           createdAt: Date.now(),
