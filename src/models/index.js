@@ -2,7 +2,6 @@ import fs from 'fs'
 import Sequelize from 'sequelize'
 import path from 'path'
 import config from '../config/config.js'
-import log from 'winston-logger-setup'
 const basename = path.basename(module.filename)
 let db = {}
 let sequelize = {}
