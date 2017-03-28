@@ -18,6 +18,7 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `npm start`
+* Your server will be running in [http://localhost:1993](http://localhost:1993)
 
 ### Running Tests
 
