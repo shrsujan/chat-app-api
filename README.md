@@ -15,7 +15,7 @@ You will need the following things properly installed on your computer.
 * `cd chat-app-api`
 * `npm install`
 * cp .env.example .env [change the environment variables like database name]
-* create databases chat-app and chat-app-test in mysql
+* create databases **_chat-app_** and **_chat-app-test_** in mysql
 
 ## Running / Development
 
@@ -25,3 +25,6 @@ You will need the following things properly installed on your computer.
 ### Running Tests
 
 * `npm test`
+
+#### Author: [Sujan Shrestha](http://twitter.com/shrsujan2007)
+#### Contributors: [Sujan Shrestha](https://github.com/shrsujan)
