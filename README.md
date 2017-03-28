@@ -14,6 +14,8 @@ You will need the following things properly installed on your computer.
 * `git clone <repository-url>` this repository
 * `cd chat-app-api`
 * `npm install`
+* cp .env.example .env [change the environment variables like database name]
+* create databases chat-app and chat-app-test in mysql
 
 ## Running / Development
 
