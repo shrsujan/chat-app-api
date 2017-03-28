@@ -5,6 +5,13 @@ import mw from '../middlewares/response'
 
 let router = express.Router()
 
+router.get('/', (req, res) => {
+  res.render('home', {
+    header: {
+      title: config.app.title
+    }
+  })
+})
 router.get('/user/:username', UserC.collect, UserC.getUserByUsername, UserC.addNewUser, mw.respond, mw.error)
 
 router.all('/*', (req, res, next) => {
