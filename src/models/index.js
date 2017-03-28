@@ -11,7 +11,7 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable])
 } else {
   sequelize = new Sequelize(config[process.env.NODE_ENV].database, config[process.env.NODE_ENV].username, config[process.env.NODE_ENV].password, {
-    logging: (process.env.NODE_ENV === 'development') ? log.cnslLog.debug : false,
+    logging: false,
     host: config[process.env.NODE_ENV].host
   })
 }

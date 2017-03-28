@@ -61,7 +61,7 @@ export default function socketService (client, io) {
     if (client.userInfo) {
       let uIndex = members.indexOf(client.userInfo.username)
       if (uIndex > -1) members.splice(uIndex, 1)
-      log.cnslLog.info(client.userInfo + ' is offline')
+      log.cnslLog.info(client.userInfo.username + ' is offline')
     }
     let index = memberSocketObjects.indexOf(client)
     if (index > -1) memberSocketObjects.splice(index, 1)
