@@ -24,7 +24,6 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "dotenv": "^4.0.0",
-    "eslint": "^3.16.1",
     "express": "^4.14.1",
     "formidable": "^1.1.1",
     "google-caja": "0.0.2",
